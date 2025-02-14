@@ -35,7 +35,7 @@ const transporter = nodemailer.createTransport({
 
   redisClient.subscribe("user_registered", async (message) => {
     const user = JSON.parse(message);
-    console.log(`📩 New User Registered: ${user.username}, Sending Welcome Email...`);
+    console.log(`New User Registered: ${user.username}, Sending Welcome Email...`);
     await sendWelcomeEmail(user.username, user.email);
   });
   
