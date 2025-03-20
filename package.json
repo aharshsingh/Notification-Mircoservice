@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-server": "node server.js",
+    "start-server": "node index.js",
     "start-subscriber-user": "node service/userRegistered.js",
     "start-subscriber-reset": "node service/passwordReset.js",
     "dev": "npm-run-all --parallel start-server start-subscriber-user start-subscriber-reset"
