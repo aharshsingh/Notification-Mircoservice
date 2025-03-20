@@ -1,4 +1,3 @@
-const redis = require('redis');
 const nodemailer = require("nodemailer");
 const redisClient = require('../redisClient');
 const {EMAIL, EMAIL_PASSWORD} = require('../config/index');
@@ -37,6 +36,4 @@ const transporter = nodemailer.createTransport({
     const user = JSON.parse(message);
     console.log(`New User Registered: ${user.username}, Sending Welcome Email...`);
     await sendWelcomeEmail(user.username, user.email);
-  });
-  
-  
+  });  
